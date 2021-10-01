@@ -1,0 +1,22 @@
+.container {
+    display: grid;
+    background-color: darksalmon;
+
+    /* Si la última mide 60%, las dos primeras se van a repartir el espacio restante, en este caso, 20% cada una. */
+    grid-template-columns: auto auto 60%;
+
+    /* Las que no tengan especificado el alto del "row" van a ocupar lo mínimo que su contenido requiera. */
+    grid-template-rows: 200px;
+
+    /* Si le ponen "justify-content", los "auto" van a ocupar el mínimo necesario. */
+    justify-content: space-between;
+
+    /* Para que el "align-content" nos funcione, tenemos que tener definido un "height". */
+    height: 60vh;
+    align-content: space-around;
+}
+
+.child {
+    background-color: darkorchid;
+    border: darkviolet 2px solid;
+}
